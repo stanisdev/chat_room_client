@@ -1,0 +1,22 @@
+{
+  "name": "chat_room_client",
+  "version": "1.0.0",
+  "description": "Simple web client for application \"chat_room\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanisdev/chat_room_client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stanisdev/chat_room_client/issues"
+  },
+  "homepage": "https://github.com/stanisdev/chat_room_client#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
