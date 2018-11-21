@@ -36,4 +36,23 @@ $(() => {
   new Users();
   new Chats();
   $('#action-chat-list').click();
+  // return;
+  let connection;
+  try {
+    connection = new WebSocket('ws://127.0.0.1:4000?access_token=' + localStorage.getItem('auth_token'));
+  } catch (err) {
+    
+  }
+  connection.onopen = function () {
+    console.log('Opened');
+    connection.send('Message From Client');
+  };
+  connection.onerror = function (error) {
+    console.log('On Error');
+    console.log(error);
+  };
+  connection.onmessage = function(event) {
+    console.log('Received From Server');
+    console.log(event);
+  }
 });
